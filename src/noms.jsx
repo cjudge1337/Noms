@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const preloadedState = localStorage.state ?
     JSON.parse(localStorage.state) : {};
   const store = configureStore(preloadedState);
-  debugger
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

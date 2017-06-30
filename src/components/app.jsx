@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from './header/header';
+import Central from './central/central';
 
 const App = () => (
   <div className="app">
-    <h1>Noms</h1>
+    <Header />
+    <Central />
   </div>
 );
 
