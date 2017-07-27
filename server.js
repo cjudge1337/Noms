@@ -9,8 +9,7 @@ app.use(express.static(__dirname));
 app.get('/fetchData', (req, res) => {
   axios.get('http://date.jsontest.com')
     .then((data) => {
-      console.log(data);
-      res.json(data);
+      res.json(data.data);
     })
     .catch(error => {
       console.error(error);
