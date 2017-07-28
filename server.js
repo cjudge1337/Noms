@@ -1,5 +1,4 @@
 const axios = require('axios');
-const CircularJSON = require('circular-json');
 const path = require('path');
 const express = require('express');
 const app = express();
@@ -8,8 +7,8 @@ app.use(express.static(__dirname));
 
 app.get('/fetchData', (req, res) => {
   axios.get('http://date.jsontest.com')
-    .then((data) => {
-      res.json(data.data);
+    .then((response) => {
+      res.json(response.data);
     })
     .catch(error => {
       console.error(error);
